@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["post"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "sql",
+      "direction": "out",
+      "name": "contacts",
+      "commandText": "dbo.Contacts",
+      "connectionStringSetting": "SqlConnectionString"
+    },
+    {
+      "name": "mySbMsg",
+      "type": "serviceBus",
+      "direction": "out",
+      "queueName": "contacts",
+      "connectionStringSetting": "ServiceBusConnectionString"
+    }
+  ]
+}
