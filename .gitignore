@@ -1,3 +1,5 @@
 /.vscode
 /connectionString
 /local.settings.json
+node_modules/
+package-lock.json
