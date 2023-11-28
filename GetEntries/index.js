@@ -11,7 +11,9 @@ module.exports = async function (context, req) {
 
     try {
         // Fetch all entries from Contentful
-        const entries = await client.getEntries();
+        const entries = await client.getEntries({
+            content_type: 'blogPost', // Replace with your content type ID
+        });
 
         context.res = {
             // status: 200, /* Defaults to 200 */
